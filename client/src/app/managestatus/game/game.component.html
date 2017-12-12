@@ -1,0 +1,79 @@
+<div class="one" *ngIf='gameNum==1' >
+  <h1>Player Status- Game {{gameNum}}</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let player of allPlayers'>
+        <td>{{player.name}}</td>
+        <td>
+          <button *ngIf= "player.game1Status=='playing'" class='playing'>Playing</button>
+          <button *ngIf= "player.game1Status!='playing'" (click)="changeStatus(player._id,1,'playing')">Playing</button>
+          <button *ngIf= "player.game1Status=='not_playing'" class='not'>Not playing</button>
+          <button *ngIf= "player.game1Status!='not_playing'" (click)="changeStatus(player._id,1,'not_playing')">Not playing</button>
+          <button *ngIf= "player.game1Status=='undecided'" class='undecided'>Undecided</button>
+          <button *ngIf= "player.game1Status!='undecided'" (click)="changeStatus(player._id,1,'undecided')">Undecided</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="two" *ngIf='gameNum==2' >
+  <h1>Player Status- Game {{gameNum}}</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let player of allPlayers'>
+        <td>{{player.name}}</td>
+        <td>
+          <button *ngIf= "player.game2Status=='playing'" class='playing'>Playing</button>
+          <button *ngIf= "player.game2Status!='playing'" (click)="changeStatus(player._id,2,'playing')">Playing</button>
+          <button *ngIf= "player.game2Status=='not_playing'" class='not'>Not playing</button>
+          <button *ngIf= "player.game2Status!='not_playing'" (click)="changeStatus(player._id,2,'not_playing')">Not playing</button>
+          <button *ngIf= "player.game2Status=='undecided'" class='undecided'>Undecided</button>
+          <button *ngIf= "player.game2Status!='undecided'" (click)="changeStatus(player._id,2,'undecided')">Undecided</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</div>
+
+<div class="three" *ngIf='gameNum==3' >
+  <h1>Player Status- Game {{gameNum}}</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let player of allPlayers'>
+        <td>{{player.name}}</td>
+        <td>
+          <button *ngIf= "player.game3Status=='playing'" class='playing'>Playing</button>
+          <button *ngIf= "player.game3Status!='playing'" (click)="changeStatus(player._id,3,'playing')">Playing</button>
+          <button *ngIf= "player.game3Status=='not_playing'" class='not'>Not playing</button>
+          <button *ngIf= "player.game3Status!='not_playing'" (click)="changeStatus(player._id,3,'not_playing')">Not playing</button>
+          <button *ngIf= "player.game3Status=='undecided'" class='undecided'>Undecided</button>
+          <button *ngIf= "player.game3Status!='undecided'" (click)="changeStatus(player._id,3,'undecided')">Undecided</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

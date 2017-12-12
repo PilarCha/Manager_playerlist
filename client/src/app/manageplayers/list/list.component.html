@@ -1,0 +1,24 @@
+<style media="screen">
+  button{
+    background-color: red;
+  }
+</style>
+<fieldset>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Preferred Position</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let player of players'>
+        <td>{{player.name}}</td>
+        <td>{{player.position}}</td>
+        <td> <button type="button" (click)='deletePlayer(player._id)'>Delete</button> </td>
+
+      </tr>
+    </tbody>
+  </table>
+</fieldset>

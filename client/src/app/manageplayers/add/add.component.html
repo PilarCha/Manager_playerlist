@@ -1,0 +1,18 @@
+<h1>Add a player</h1>
+<form (submit)='whenSubmit()' #playerForm="ngForm" >
+Player Name: <input
+type="text"
+name="name"
+minlength=4
+[(ngModel)]='newPlayer.name'
+#name='ngModel'><br>
+Preffered Position: <input
+type="text"
+name="position"
+required
+[(ngModel)]="newPlayer.position"
+#position='ngModel'><br>
+<input type="submit" value="Create"><br>
+
+
+</form>
