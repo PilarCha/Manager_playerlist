@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { trigger, state, style, animate, transition, stagger, query } from '@angular/animations'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+
+  constructor( router:Router) {
+    router.events.subscribe((url:any) => console.log(url));
+    console.log(router.url);  // to print only path eg:"/login"
+  }
+
+  ngOnInit() {
+
+  }
+
+  home() {
+    return router.url === '/'
+  }
 }
