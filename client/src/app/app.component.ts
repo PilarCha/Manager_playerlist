@@ -13,7 +13,7 @@ export class AppComponent {
 
   constructor( router:Router) {
     router.events.subscribe((url:any) => console.log(url));
-    console.log(router.url);  // to print only path eg:"/login"
+    console.log("this is the url", router.url);  // to print only path eg:"/login"
   }
 
   ngOnInit() {
@@ -21,6 +21,6 @@ export class AppComponent {
   }
 
   home() {
-    return router.url === '/'
+    
   }
 }

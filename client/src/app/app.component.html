@@ -3,6 +3,12 @@
     display: inline-block;
   }
 </style>
- <a [routerLink]="['/manage']"> <h1>Manage Players |</h1> </a>
- <a [routerLink]="['/status']"> <h1>Manage Player Status</h1> </a><br>
+<div class="container">
+  <ul class="nav nav-tabs">
+  <li class="active">
+    <a [routerLink]="['/manage']"> <h1>Manage Players |</h1> </a>
+  </li>
+  <li><a [routerLink]="['/status']"> <h1>Manage Player Status</h1> </a><br></li>
+</ul>
 <router-outlet ng-if="home"></router-outlet>
+</div>

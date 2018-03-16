@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js && ./client npm build -w"
+    "start": "nodemon server.js && ./client ng build -w"
   },
   "keywords": [],
   "author": "",
